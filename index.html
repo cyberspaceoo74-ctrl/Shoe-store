@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>STRIDE — Premium Footwear Pakistan</title>
+<meta name="description" content="STRIDE — Pakistan's premium sneaker & footwear store. Luxury shoes delivered nationwide." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">STRIDE<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l1.2 12.2a1.5 1.5 0 0 1-1.5 1.8H6.3a1.5 1.5 0 0 1-1.5-1.8L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-glow"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge reveal">✦ New Season Drop 2026</div>
+      <h1 class="reveal delay-1">Walk Like<br>You <em>Own</em> It.</h1>
+      <p class="reveal delay-2">Premium sneakers &amp; leather footwear, curated for Pakistan. Uncompromising quality, unfair advantage on the streets.</p>
+      <div class="hero-cta reveal delay-3">
+        <a href="#shop" class="btn btn-gold">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#collections" class="btn btn-outline">View Collections</a>
+      </div>
+      <div class="hero-stats reveal delay-4">
+        <div><strong>25k+</strong><span>Happy Customers</span></div>
+        <div><strong>4.9★</strong><span>Average Rating</span></div>
+        <div><strong>Nationwide</strong><span>Cash on Delivery</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800&q=80&auto=format&fit=crop" alt="Premium sneaker" class="hero-shoe" />
+        <div class="float-card card-1">
+          <span class="fc-emoji">⚡</span>
+          <div><strong>Free Delivery</strong><small>Orders over Rs. 5,000</small></div>
+        </div>
+        <div class="float-card card-2">
+          <span class="fc-emoji">🛡️</span>
+          <div><strong>100% Authentic</strong><small>Guaranteed genuine</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>FAST DELIVERY ✦ CASH ON DELIVERY ✦ 7-DAY RETURNS ✦ 100% AUTHENTIC ✦ PREMIUM QUALITY ✦ PKR PRICING ✦ </span>
+    <span>FAST DELIVERY ✦ CASH ON DELIVERY ✦ 7-DAY RETURNS ✦ 100% AUTHENTIC ✦ PREMIUM QUALITY ✦ PKR PRICING ✦ </span>
+  </div>
+</div>
+
+<!-- ═══════════ SHOP ═══════════ -->
+<section class="section shop" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Curated for the bold</p>
+        <h2 class="section-title">Featured <em>Drops</em></h2>
+      </div>
+      <div class="filter-bar" id="filterBar">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="sneakers">Sneakers</button>
+        <button class="chip" data-filter="leather">Leather</button>
+        <button class="chip" data-filter="running">Running</button>
+      </div>
+    </div>
+
+    <div class="search-wrap" id="searchWrap">
+      <input type="text" id="searchInput" placeholder="Search shoes..." />
+    </div>
+
+    <div class="product-grid" id="productGrid"><!-- rendered by JS --></div>
+  </div>
+</section>
+
+<!-- ═══════════ COLLECTIONS ═══════════ -->
+<section class="section collections" id="collections">
+  <div class="container">
+    <p class="eyebrow center">Signature lines</p>
+    <h2 class="section-title center">Our <em>Collections</em></h2>
+    <div class="coll-grid">
+      <a href="#shop" class="coll-card" data-jump="sneakers">
+        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=700&q=80&auto=format&fit=crop" alt="Street sneakers" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552346154-21d32810aba3?w=700&q=80&auto=format&fit=crop'">
+        <div class="coll-info"><h3>Street Sneakers</h3><span>Explore →</span></div>
+      </a>
+      <a href="#shop" class="coll-card" data-jump="leather">
+        <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=700&q=80&auto=format&fit=crop" alt="Leather shoes" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700&q=80&auto=format&fit=crop'">
+        <div class="coll-info"><h3>Executive Leather</h3><span>Explore →</span></div>
+      </a>
+      <a href="#shop" class="coll-card" data-jump="running">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80&auto=format&fit=crop" alt="Running shoes" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&q=80&auto=format&fit=crop'">
+        <div class="coll-info"><h3>Performance Running</h3><span>Explore →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="section about" id="about">
+  <div class="container about-inner">
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&q=80&auto=format&fit=crop" alt="Shoe craft">
+    </div>
+    <div class="about-text reveal delay-1">
+      <p class="eyebrow">Why STRIDE</p>
+      <h2 class="section-title">Crafted for <em>Confidence</em></h2>
+      <p>Every pair we sell is inspected, authenticated, and delivered the way luxury should be. From Karachi to Khyber, we've walked with 25,000+ customers who refuse anything less.</p>
+      <ul class="feature-list">
+        <li>✦ 100% authentic sourcing, every time</li>
+        <li>✦ Cash on delivery across Pakistan</li>
+        <li>✦ 7-day no-questions exchanges</li>
+        <li>✦ Premium packaging on every order</li>
+      </ul>
+      <a href="#shop" class="btn btn-gold">Start Shopping</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <div>
+      <a href="#home" class="logo">STRIDE<span>.</span></a>
+      <p class="footer-tag">Premium footwear. Pakistani prices.<br>World-class standards.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop">All Products</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">New Arrivals</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Shipping &amp; Delivery</a>
+      <a href="#">Returns &amp; Exchange</a>
+      <a href="#">Size Guide</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/923491144335" target="_blank" rel="noopener">WhatsApp: 0349-1144335</a>
+      <a href="tel:+923491144335">+92 349 1144335</a>
+      <a href="mailto:hello@stride.pk">hello@stride.pk</a>
+      <p>MM Alam Road, Lahore, Pakistan</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 STRIDE Footwear. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ═══════════ CART DRAWER ═══════════ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your Cart <span id="cartHeadCount">(0)</span></h3>
+    <button class="icon-btn" id="closeCart" aria-label="Close">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- rendered by JS -->
+  </div>
+  <div class="cart-foot">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <strong id="cartSubtotal">Rs. 0</strong>
+    </div>
+    <p class="ship-note" id="shipNote">🚚 Add Rs. 5,000+ for free delivery</p>
+    <button class="btn btn-gold btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ═══════════ PRODUCT MODAL ═══════════ -->
+<div class="modal" id="productModal">
+  <div class="modal-box" id="modalBox"><!-- rendered by JS --></div>
+</div>
+
+<!-- ═══════════ CHECKOUT MODAL ═══════════ -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-box checkout-box">
+    <button class="icon-btn modal-close" id="closeCheckout">✕</button>
+    <h3 class="ck-title">Checkout</h3>
+    <p class="ck-sub">Cash on Delivery available nationwide 💵</p>
+    <form id="checkoutForm">
+      <div class="field"><label>Full Name</label><input required placeholder="Ahmed Ali" /></div>
+      <div class="field"><label>Phone Number</label><input required type="tel" placeholder="03XX-XXXXXXX" /></div>
+      <div class="field"><label>Full Address</label><textarea required rows="2" placeholder="House #, Street, City"></textarea></div>
+      <div class="field"><label>City</label>
+        <select required>
+          <option value="">Select city</option>
+          <option>Karachi</option><option>Lahore</option><option>Islamabad</option>
+          <option>Rawalpindi</option><option>Faisalabad</option><option>Peshawar</option>
+          <option>Multan</option><option>Quetta</option><option>Other</option>
+        </select>
+      </div>
+      <div class="ck-summary" id="ckSummary"></div>
+      <button type="submit" class="btn btn-gold btn-block">Place Order</button>
+    </form>
+    <div class="order-success" id="orderSuccess" hidden>
+      <div class="success-icon">✅</div>
+      <h3>Order Placed!</h3>
+      <p id="orderMsg">Thank you! We'll call you shortly to confirm.</p>
+      <button class="btn btn-outline btn-block" id="successClose">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ FLOATING WHATSAPP ═══════════ -->
+<a class="wa-float" href="https://wa.me/923491144335?text=Hi!%20I%20have%20a%20question%20about%20STRIDE%20shoes%20👟" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.7 31.3l7.9-2.1c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a12.4 12.4 0 0 1-1.8-6.4C3.6 9 9.2 3.5 16 3.5S28.4 9 28.4 15.9 22.8 28.3 16 28.3zm7-9.4c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-.5-.4.1-1.4-.1-1.7-.2-.3-.9-.9-.9-1.6s.4-.9.6-1c.2-.1.4-.2.6-.2h.6c.2 0 .4 0 .6-.5s.1-.7 0-.9c-.1-.2-.9-2.1-1.2-2.9-.3-.8-.7-.7-.9-.7h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<!-- ═══════════ TOAST ═══════════ -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
